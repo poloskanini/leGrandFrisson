@@ -1,0 +1,135 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #000;
+  font-family: roboto, sans-serif;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url(ressources/citynight.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.navbar .nav-link {
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1rem 0 0.2rem;
+  margin: 1rem;
+  color: #fff;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.nav-link:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.main-title {
+  color: #fff;
+  margin: 3rem;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.main-title h1 {
+  font-weight: 900;
+  font-size: clamp(25px, 7vw, 110px);
+  margin: 0 0 .7rem 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-title h3 {
+  font-weight: 700;
+  font-size: clamp(20px, 7vw, 60px);
+  margin: 0 0 .7rem 0;
+  font-family: 'roboto';
+}
+
+.start-live {
+  background-color: #fff;
+  color: #000;
+  width: 200px;
+  padding: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all .1s ease-in-out;
+}
+
+.start-live:hover {
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.start-live span {
+  margin-right: 2rem;
+  font-size: 1.2rem;
+}
+
+.start-live a {
+  text-decoration: none;
+  color: #000;
+}
+
+.streaming {
+  width: 30px;
+}
+
+.floating-btn {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  border: 2px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 #fff;
+  animation: pulse 1.3s infinite;
+}
+
+.floating-btn img {
+  width: 30px;
+}
+
+/* ANIMATION FLOATING-BTN PULSE */
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 15px rgb(255, 255, 255, 0.01);
+  }
+}
+
+
+/* MEDIAS QUERIES for Mobile VIEWPORT */
+@media screen and (max-width: 800px) {
+
+  .main-title {
+    margin: 2rem 0 0 2rem;
+    padding: 0;
+  }
+}
